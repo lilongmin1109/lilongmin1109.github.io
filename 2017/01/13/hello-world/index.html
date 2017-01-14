@@ -378,7 +378,8 @@ Quick">
           
 
 
-           <section id="comments">
+          <% if (!index && post.comments && config.duoshuo_shortname){ %>
+  <section id="comments">
     <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
     <!-- 多说评论框 end -->
@@ -396,6 +397,7 @@ Quick">
       </script>
     <!-- 多说公共JS代码 end -->
   </section>
+  <% } %>
 
         </div>
         
